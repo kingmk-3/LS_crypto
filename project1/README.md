@@ -3,10 +3,10 @@
 ## Clarification Regarding Convention
 
 Currently, if the key is `GYBNQKURP`, then it's represented as:
-\[ K = \begin{pmatrix} 6 & 24 & 1 \\ 13 & 16 & 10 \\ 20 & 17 & 15 \end{pmatrix} \]
+$$ K = \begin{pmatrix} 6 & 24 & 1 \\ 13 & 16 & 10 \\ 20 & 17 & 15 \end{pmatrix} $$
 
 while a message `nameis` is represented as:
-\[ P = \begin{pmatrix} 13 & 4 \\ 0 & 8 \\ 12 & 18 \end{pmatrix} \]
+$$ P = \begin{pmatrix} 13 & 4 \\ 0 & 8 \\ 12 & 18 \end{pmatrix} $$
 
 ## Description of the Function in `project.py`
 
@@ -30,15 +30,15 @@ Additionally, the script prompts the user each time to decide whether to change 
 
 The basic concept of linear algebra is used for key discovery. We start with the equation:
 
-\[
+$$
 K \cdot P = C
-\]
+$$
 
 which implies:
 
-\[
+$$
 P^{T} \cdot K^{T} = C^{T}
-\]
+$$
 
 We find the solution space for each column of \( K^{T} \). Then, we take those combinations of columns that result in an invertible matrix \( K \).
 
@@ -55,9 +55,9 @@ We find the solution space for each column of \( K^{T} \). Then, we take those c
 
 If you have a plaintext matrix \( P \) and a ciphertext matrix \( C \), you solve for \( K \) as follows:
 
-\[
+$$
 P^{T} \cdot K^{T} = C^{T}
-\]
+$$
 
 Given \( P \) and \( C \), you can find \( K \) by solving the system of linear equations and ensuring that the resulting matrix is invertible.
 
