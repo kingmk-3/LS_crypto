@@ -13,9 +13,9 @@ $$
 while a message `nameis` is represented as:
 
 $$
-P = \begin{pmatrix} 13 & 4
-\\ 0 & 8
-\\ 12 & 18 \end{pmatrix}
+P = \begin{pmatrix} 13 & 4\\
+0 & 8\\
+12 & 18 \end{pmatrix}
 $$
 
 ## Description of the Function in `project.py`
