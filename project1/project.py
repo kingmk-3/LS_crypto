@@ -75,7 +75,7 @@ def brute_force_discover_all(plaintext,ciphertext):
                 candidate_key = np.array([col1, col2, col3])
                 if DET(candidate_key,26)!=0:
                     if np.array_equal(np.matmul(candidate_key, plaintext_matrix.T) % 26, ciphertext_matrix.T):
-                        all_keys.append(candidate_key)
+                        all_keys.append(convert_matrix_to_text(candidate_key.T))
     return all_keys
 
 def DET(matrix, mod):
@@ -111,7 +111,7 @@ while True:
         print("We assume the key to 3*3")
         discovered_key = brute_force_discover_key(plaintext,ciphertext)
         print("Discovered Key Matrix:")
-        print(discovered_key)
+        print(convert_matrix_to_text(discovered_key.T))
     elif mode=='3':
         plaintext = input("Enter the known plaintext: ")
         ciphertext = input("Enter the corresponding ciphertext: ")
