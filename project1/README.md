@@ -1,21 +1,60 @@
-# `Project 1 : Hill cipher`
+# Project 1: Hill Cipher
 
-## Description of the function in the project.py:
+## Description of the Function in `project.py`
 
-### First of all suffient commenting is there
+### Commenting and Modes
 
-### Modes: `I have create 4 modes, 1 : for encryption, 2 : key discovery, 3 : all key discovery, 4 : exit`
+The script is well-commented to ensure clarity. It includes four modes:
 
-### Besides this script also ask everytime whether or not you want to change the key
+1. **Encryption**: Encrypts the given plaintext using the provided key.
+2. **Key Discovery**: Discovers one possible key from the solution space.
+3. **All Key Discovery**: Discovers all possible keys from the solution space.
+4. **Exit**: Exits the script.
 
-### The difference between mode 2 and 3 is that 2 just returns only one key from the solution space
+Additionally, the script prompts the user each time to decide whether to change the key.
 
-## Concept for Key discover:
+### Difference Between Mode 2 and Mode 3
 
-### Juts the basic linear algebra, was used. First we know that
+- **Mode 2**: Returns only one key from the solution space.
+- **Mode 3**: Returns all possible keys from the solution space.
 
-    \[ K.P =C \]
-    that means,
-    \[ P^{T}.K^{T}=C^{T} \]
-    So we find the solution space for each of the column \(K^{T}\)
-    Then take those combination of coloumn that result in invertible matrix \(K\)
+## Concept for Key Discovery
+
+The basic concept of linear algebra is used for key discovery. We start with the equation:
+
+\[
+K \cdot P = C
+\]
+
+which implies:
+
+\[
+P^{T} \cdot K^{T} = C^{T}
+\]
+
+We find the solution space for each column of \( K^{T} \). Then, we take those combinations of columns that result in an invertible matrix \( K \).
+
+### Steps for Key Discovery
+
+1. **Transpose the Equations**:
+   - From \( K \cdot P = C \), we transpose to \( P^{T} \cdot K^{T} = C^{T} \).
+2. **Find Solution Space**:
+   - Determine the solution space for each column of \( K^{T} \).
+3. **Check Invertibility**:
+   - Combine columns that result in an invertible matrix \( K \).
+
+### Example
+
+If you have a plaintext matrix \( P \) and a ciphertext matrix \( C \), you solve for \( K \) as follows:
+
+\[
+P^{T} \cdot K^{T} = C^{T}
+\]
+
+Given \( P \) and \( C \), you can find \( K \) by solving the system of linear equations and ensuring that the resulting matrix is invertible.
+
+This method ensures that we can discover valid keys that can be used for decryption.
+
+## Usage
+
+Run the script and follow the prompts to select the desired mode and provide the necessary input for encryption or key discovery.
