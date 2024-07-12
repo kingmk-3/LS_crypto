@@ -3,10 +3,16 @@
 ## Clarification Regarding Convention
 
 Currently, if the key is `GYBNQKURP`, then it's represented as:
-$$ K = \begin{pmatrix} 6 & 24 & 1 \\ 13 & 16 & 10 \\ 20 & 17 & 15 \end{pmatrix} $$
+
+$$
+K = \begin{pmatrix} 6 & 24 & 1 \\ 13 & 16 & 10 \\ 20 & 17 & 15 \end{pmatrix}
+$$
 
 while a message `nameis` is represented as:
-$$ P = \begin{pmatrix} 13 & 4 \\ 0 & 8 \\ 12 & 18 \end{pmatrix} $$
+
+$$
+P = \begin{pmatrix} 13 & 4 \\ 0 & 8 \\ 12 & 18 \end{pmatrix}
+$$
 
 ## Description of the Function in `project.py`
 
