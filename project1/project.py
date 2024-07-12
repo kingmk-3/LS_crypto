@@ -13,7 +13,6 @@ def convert_text_to_matrix(text,n):
         text += "X" * num_x_needed
     matrix=np.array([ord(x)-65 for x in text]).reshape(-1,n).T
     return matrix
-
 def convert_matrix_to_text(matrix):
     text=""
     text+="".join([chr(x+65) for x in matrix.T.reshape(-1)])
